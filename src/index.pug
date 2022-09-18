@@ -1,0 +1,241 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title High pass
+    script(defer src='https://api-maps.yandex.ru/2.1.77/?apikey=API-ключ&lang=ru_RU&csp=true&')
+    script(defer src='https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js')    
+    script(defer src='app.js')
+    link(rel='stylesheet', href='main.css')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+  body
+    - var nav = [{title: 'О студии', id: 'about'}, {title: 'Наши проекты', id: 'projects'}, {title: 'Услуги', id: ''}, {title: 'Мастер-классы', id: 'hero'}, {title: 'Контакты', id: 'contacts'} ]
+
+    header.header
+      .container.grid.grid-header
+        h1.header__title.hidden Фотостудия High Pass
+        svg.svg.grid-logo(width='190', height='30', viewBox='0 0 190 30', aria-label='Логотип фотостудии High pass')
+          use(xlink:href='images/sprite.svg#logo')
+        nav.header__nav.grid-nav
+          ul.header__list
+            each i in nav 
+                li.header__item
+                    a.header__link(href='#'+i.id)= i.title 
+        button.header__search.grid-search(aria-label="Поиск")
+          svg.svg(width='25', height='25', viewBox='0 0 25 25', xmlns='http://www.w3.org/2000/svg')
+            use(xlink:href='images/sprite.svg#search')
+        form(method="get").header__search-form.grid-search-form 
+          input.header__input(type="text", name="search", placeholder='Что будем искать?')
+          button.header__search-cls(aria-label="Закрыть поиск")
+      .container.grid.grid-header-bottom
+        nav.header__nav.grid-nav.header__nav_tablet
+            ul.header__list.header__list_tablet
+                each i in nav 
+                    li.header__item 
+                        a.header__link(href='#'+i.id)= i.title
+        button.header__burger(aria-label="Меню")
+            svg.svg(width='20', height='20', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
+                use(xlink:href='images/sprite.svg#burger')
+ 
+        .header__menu 
+          nav.header__nav.grid-nav.header__nav_mobile
+            button.header__menu-cls(aria-label="Закрыть меню")
+            ul.header__list.header__list_mobile
+                each i in nav 
+                    li.header__item 
+                        a.header__link(href='#'+i.id)= i.title
+                li.header__item 
+                    a.header__phone.contacts__phone(href='tel:+74951234567', aria-label="Телефон") 
+                        svg.contacts__call(width='22', height='22', viewBox='0 0 22 22', xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/sprite.svg#call')
+                        |+7&nbsp;495 424-23-532
+    main.main
+      #hero.hero
+        .container.grid.grid-hero
+          .hero__item.grid-hero-1
+            picture
+              source(media='(max-width: 420px)', srcset='images/hero-320-1.webp')
+              source(media='(max-width: 920px)', srcset='images/hero-768-1.webp')
+              source(media='(max-width: 1200px)', srcset='images/hero-1024-1.webp')
+              img(src='images/hero-1920-1.webp', alt='Мастер-класс')
+            .hero__block
+              a.hero__link(href='#') #мастеркласс
+              p.hero__author Мастер-класс от Игоря Робова
+              h2.hero__title Неоновый фотосет 2.0
+                time(datetime='2022-07-07') 7 июля 20:00
+              button.hero__btn Узнать больше
+          .hero__item.grid-hero-2
+            h3.hero__subtitle Работы участников предыдущего мастер-класса
+            picture
+              source(media='(max-width: 420px)', srcset='images/hero-320-2.webp')
+              source(media='(max-width: 920px)', srcset='images/hero-768-2.webp')
+              source(media='(max-width: 1200px)', srcset='images/hero-1024-2.webp')
+              img(src='images/hero-1920-2.webp', alt='Мастер-класс')
+          .hero__item.grid-hero-3
+            picture
+              source(media='(max-width: 420px)', srcset='images/hero-320-3.webp')
+              source(media='(max-width: 920px)', srcset='images/hero-768-3.webp')
+              source(media='(max-width: 1200px)', srcset='images/hero-1024-3.webp')
+              img(src='images/hero-1920-3.webp', alt='Мастер-класс')
+          .hero__item.grid-hero-4
+            picture
+              source(media='(max-width: 420px)', srcset='images/hero-320-4.webp')
+              source(media='(max-width: 920px)', srcset='images/hero-768-4.webp')
+              source(media='(max-width: 1200px)', srcset='images/hero-1024-4.webp')
+              img(src='images/hero-1920-4.webp', alt='Мастер-класс')
+      #about.about
+        .container.grid.grid-about
+          h2.about__title.grid-title О студии
+          .about__text.grid-about-1
+            p.about__descr В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
+          .about__pic.grid-about-2
+            picture
+              source(media='(max-width: 420px)', srcset='images/about-320.webp')
+              source(media='(max-width: 920px)', srcset='images/about-768.webp')
+              source(media='(max-width: 1200px)', srcset='images/about-1024.webp')
+              img(src='images/about-1920.webp', alt='Фотостудия High pass')
+            h3.about__subtitle Подписаться на рассылку
+            form#form-email.about__form.form(action='https://jsonplaceholder.typicode.com/posts', method='post')
+              .form__block
+                input#about__input.about__input(type='email', name='email', required, placeholder='Email')
+              button(type='submit') Отправить
+      #projects.projects
+        .container
+          h2.projects__title Наши проекты
+          .grid.grid-projects
+            .projects__item.grid-projects-1
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-1.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-1.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-1.webp')
+                img(src='images/project-1920-1.webp', alt='Пейзаж')
+              a.projects__link(href='#') #пейзаж
+              p.projects__descr Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени черезвычайного эффекта
+              .projects__time
+                svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns='http://www.w3.org/2000/svg')
+                  use(xlink:href='images/sprite.svg#date')
+                time(datetime='2022-06-16') 16 июня
+            .projects__item.grid-projects-2
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-2.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-2.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-2.webp')
+                img(src='images/project-1920-2.webp', alt='Портрет')
+              a.projects__link(href='#') #портрет
+              p.projects__descr В&nbsp;своём стремлении улучшить опыт мы упускаем, что явные противоречия исключают подобные проявления
+              .projects__time
+                svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href='images/sprite.svg#date')
+                time(datetime='2022-05-28') 28 мая
+            .projects__item.grid-projects-3
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-3.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-3.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-3.webp')
+                img(src='images/project-1920-3.webp', alt='Предмет')
+              a.projects__link(href='#') #предмет
+              p.projects__descr Равным образом, высокое качество позиционных перспектив подразумевает наличие
+              .projects__time
+                svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href='images/sprite.svg#date')
+                time(datetime='2022-05-14') 14 мая
+            .projects__item.grid-projects-4
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-4.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-4.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-4.webp')
+                img(src='images/project-1920-4.webp', alt='fuji')
+              a.projects__link(href='#') #fuji
+              .projects__preview
+                .projects__time
+                  svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href='images/sprite.svg#date')
+                  time(datetime='2022-04-09') 9 апреля
+                h3.projects__subtitle Cемантический разбор
+                p.projects__descr В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы
+                button.projects__btn О проекте
+            .projects__item.grid-projects-5
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-5.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-5.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-5.webp')
+                img(src='images/project-1920-5.webp', alt='Забвение')
+              a.projects__link(href='#') #пректзабвение
+              .projects__preview
+                .projects__time
+                  svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href='images/sprite.svg#date')
+                  time(datetime='2022-03-20') 20 марта
+                h3.projects__subtitle Забвение
+                p.projects__descr Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
+                button.projects__btn О проекте
+            .projects__item.grid-projects-6
+              picture
+                source(media='(max-width: 420px)', srcset='images/project-320-6.webp')
+                source(media='(max-width: 920px)', srcset='images/project-768-6.webp')
+                source(media='(max-width: 1200px)', srcset='images/project-1024-6.webp')
+                img(src='images/project-1920-6.webp', alt='Ретушь')
+              a.projects__link(href='#') #ретушь
+              p.projects__descr Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов и прочей структуры интересующихся
+              .projects__time
+                svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href='images/sprite.svg#date')
+                time(datetime='2022-03-09') 9 марта
+            .projects__item.grid-projects-7
+              picture
+                source(media='(max-width: 420px)', srcset='/images/project-320-7.webp')
+                source(media='(max-width: 920px)', srcset='/images/project-768-7.webp')
+                source(media='(max-width: 1200px)', srcset='/images/project-1024-7.webp')
+                img(src='/images/project-1920-7.webp', alt='Портрет')
+              a.projects__link(href='#') #портрет
+              p.projects__descr С&nbsp;учётом сложившейся международной обстановки, новая модель организационной позиции общества
+              .projects__time
+                svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href='images/sprite.svg#date')
+                time(datetime='2022-03-01') 1 марта
+      #contacts.contacts
+        .container
+          h2.contacts__title Контакты
+          .grid.grid-contacts
+            .contacts__block.grid-contacts-block
+              h3.contacts__name Студия &laquo;High&nbsp;pass&raquo;
+              address.contacts__address 107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
+              a.contacts__phone(href='tel:+74951234567', aria-label='Телефон') 
+                svg.contacts__call(width='22', height='22', viewBox='0 0 22 22', xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href='images/sprite.svg#call')
+                |+7&nbsp;495 424-23-532
+              button.contacts__btn-cls(aria-label='Закрыть')
+            #map.contacts__map.grid-map
+            .contacts__form-block.grid-contacts-form
+              h3.contacts__subtitle Оставить заявку
+              p.contacts__descr Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или другого мероприятия
+              form#form(action='https://jsonplaceholder.typicode.com/posts', method='post')
+                .form__block
+                    input#input-name(type='text', name='name', required, placeholder='Имя')
+                .form__block
+                    input#input-email(type='email', name='email', required, placeholder='Email')
+                textarea#input-message(name='message', placeholder='Комментарий')
+                button(type='submit') Отправить
+    footer#footer.footer
+      .container.grid.grid-footer
+        .footer__block.grid-footer-1
+          svg.svg(width='190', height='30', viewBox='0 0 190 30')
+            use(xlink:href='images/sprite.svg#logo')
+          span Фотостудия High pass &reg;2018&ndash;2020
+        .footer__block.grid-footer-2
+          p.footer__descr Которая из&nbsp;моих фотографий самая любимая?
+            br 
+            |Та, которую я собираюсь снять завтра.
+            br 
+            |&copy;&nbsp;Имоджен Каннингем
+        .footer__block.grid-footer-3
+          p.footer__descr Больше интересного:
+          .footer__social
+            a.footer__link(href='#', aria-label="Социальная сеть Одноклассники")
+                svg.contacts__call(width='30', height='30', viewBox='0 0 30 30', xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href='images/sprite.svg#ok')
+            a.footer__link(href='#', aria-label="Социальная сеть Вконтакте")
+                svg.contacts__call(width='30', height='30', viewBox='0 0 30 30', xmlns="http://www.w3.org/2000/svg")
+                    use(xlink:href='images/sprite.svg#vk')

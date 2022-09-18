@@ -1,0 +1,128 @@
+@import '_mixin.scss';
+.grid {
+    // max-width: 1344px;
+    // margin: 0 auto;
+    // padding: 0 27px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+    gap: 30px;
+    // grid-auto-columns: 1fr;
+    // grid-auto-flow: dense;
+}
+.grid-header {
+    grid-template-rows: 80px;
+    align-items: center;
+}
+.grid-header-bottom {
+    // @include hidden;
+    display: none;
+}
+.grid-logo {
+    grid-column: 1/span 3;
+}
+.grid-nav {
+    grid-column: 4/11;
+}
+.grid-search {
+    grid-column-start: 12;
+    justify-self: end;
+}
+.grid-hero {
+    grid-template-rows: 1fr, auto;
+    // grid-auto-rows: minmax(0, auto);
+    // grid-template-areas: 
+    // hero-1 hero-1 hero-1 hero-1 hero-3 hero-3
+    // hero-3 hero-3 hero-2 hero-2 hero-2 hero-3
+    // ;
+
+}
+.grid-hero-1 {
+    grid-column: 1/span 6;
+    grid-row: 1/3;
+}
+.grid-hero-2 {
+    grid-column: 7/13;
+    grid-row: 1/ span 1;
+}
+.grid-hero-3 {
+    grid-column: 7/span 3;
+    grid-row-start: 2;
+}
+.grid-hero-4 {
+    grid-column: 10/ span 3;
+    grid-row-start: 2;
+}
+.grid-about {
+    gap: 0 30px;
+}
+.grid-title {
+    grid-column: 1/13;
+    order: -1;
+}
+.grid-about-1 {
+    grid-column: 1/span 6;
+}
+.grid-about-2 {
+    grid-column: 7/span 6;
+}
+.grid-projects {
+    grid-template-rows: auto, auto;
+    gap: 30px;
+}
+.grid-projects-1 {
+    grid-column: 1/span 2;
+    grid-row: 1;
+}
+.grid-projects-2 {
+    grid-column: 3/span 2;
+    grid-row: 1;
+}
+.grid-projects-3 {
+    grid-column: 5/span 2;
+    grid-row: 1;
+}
+.grid-projects-4 {
+    grid-column: 7/span 6;
+    grid-row: 1;
+}
+.grid-projects-5 {
+    grid-column: 1/span 6;
+    grid-row: 2;
+}
+.grid-projects-6 {
+    grid-column: 7/span 3;
+    grid-row: 2;
+}
+.grid-projects-7 {
+    grid-column: 10/span 3;
+    grid-row: 2;
+}
+.grid-contacts-block {
+    grid-column: 1/span 4;
+    grid-row: 1;
+    order: 1;
+}
+.grid-map {
+    grid-column: 1/span 8;
+    grid-row: 1;
+}
+.grid-contacts-form {
+    grid-column: 9/span 4;
+    grid-row: 1;
+}
+.grid-footer {
+    // grid-template-rows: 106px;
+    align-items: flex-start;
+}
+.grid-footer-1 {
+    grid-column: 1/span 4;
+}
+.grid-footer-2 {
+    grid-column: 5/span 4;
+}
+.grid-footer-3 {
+    grid-column: 9/span 4;
+    justify-self: end;
+}
+

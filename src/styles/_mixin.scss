@@ -1,0 +1,200 @@
+@import '_variables.scss';
+// @import '_common.scss';
+
+
+@mixin ghost {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+@mixin hidden {
+    position: absolute;
+    // width: 1px;
+    // height: 1px;
+    // margin: -1px;
+    // border: 0;
+    // padding: 0;
+    // clip: rect(0, 0, 0, 0);
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+}
+@mixin visible {
+    pointer-events: visible;
+    visibility: visible;
+    clip: initial;
+    overflow: visible;
+    margin: initial;
+    opacity: 1;
+}
+@mixin btnReset {
+    font-family: 'roboto', sant-serif;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	border-radius: 0;
+	appearance: none;
+	display: inline-block;
+    cursor: pointer;
+}
+@mixin listReset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@mixin linkReset {
+    text-decoration: none;
+    &:focus-visible {
+        border: none;
+        outline: none;
+    }
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+}
+@mixin btnEffect {
+    color: $color-FFFFFF;
+    font-size: 16px;
+    padding: 15px 22px;
+    background-color: $color-FF6E30;
+	transition: $transitionTimeFunc $transitionDuration $transitionProp;
+
+	&:hover {
+        background-color: $color-BC572B;	
+    }
+
+	&:focus{
+		outline: transparent;
+	}
+
+	&:focus-visible {
+        background-color: $color-FF6E30;
+        outline: 3px solid $color-CE4307;
+        outline-offset: -3px;
+
+		// &::after {
+        //     @include ghost();
+        //     border: 3px solid purple;
+        // }
+	}
+
+	&:active {
+        background-color: $color-CE4307;	
+	}
+}
+@mixin textDescription {
+    font-family: 'roboto', sans-serif;   
+    font-size: 16px; 
+    font-weight: 400;
+    line-height: 22px;
+}
+@mixin textTitle {
+    font-family: 'tt_firs_neue', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+@mixin textMenu {
+    font-family: 'tt_firs_neue', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: $transitionTimeFunc $transitionDuration $transitionProp;
+}
+@mixin textLink {
+    font-family: 'roboto', sans-serif;   
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-FFFFFF;
+    padding: 7px 15px;
+    background-color: $color-202020;
+}
+@mixin textSubtitle {
+    font-family: 'tt_firs_neue', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+@mixin inputDark {
+    font-family: 'roboto', sans-serif;   
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 23px;
+    background-color: $color-4A4A4A;
+    color: $color-CACACA;
+    border: none;
+    transition: $transitionTimeFunc $transitionDuration $transitionProp;
+    &::placeholder {
+        transition: $transitionTimeFunc $transitionDuration $transitionProp;
+    }
+    &:hover:not(:focus-visible)::placeholder {
+        color: $color-FF6E30;
+    }
+    &:focus-visible {
+        outline: 1px solid $color-FF6E30;
+        outline-offset: -1px;
+        border: none;
+    }
+    &:active {
+        color: $color-FFFFFF;
+        border: none;
+    }
+}
+@mixin inputLight {
+    font-family: 'roboto', sans-serif;   
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 23px;
+    background-color: $color-E9E9E9;
+    color: $color-999999;
+    border: none;
+    outline-offset: -1px;
+    transition: $transitionTimeFunc $transitionDuration $transitionProp;
+    &::placeholder {
+        transition: $transitionTimeFunc $transitionDuration $transitionProp;
+    }
+
+    &:hover:not(:focus-visible)::placeholder {
+        color: $color-FF6E30;
+    }
+    &:focus-visible {
+        outline: 1px solid $color-FF6E30;
+        outline-offset: -1px;
+        border: none;
+    }
+    &:focus {
+        border: none;
+    }
+    &:active {
+        color: $color-202020;
+        border: none;
+    }
+
+}
+@mixin textOverflow {
+    height: 5em;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+@mixin btnCls {
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    padding: 0;
+    background-color: $color-4A4A4A;
+    &::after {
+        content: '\00d7';
+        color: $color-FFFFFF;
+        width: 18px;
+        height: 18px;
+    }
+}
