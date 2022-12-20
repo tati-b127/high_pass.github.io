@@ -9,7 +9,7 @@ html(lang='ru')
     script(defer src='https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js')    
     script(defer src='app.js')
     link(rel='stylesheet', href='main.css')
-    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='shortcut icon', href='./images/favicon.ico', type='image/x-icon')
   body
     - var nav = [{title: 'О студии', id: 'about'}, {title: 'Наши проекты', id: 'projects'}, {title: 'Услуги', id: ''}, {title: 'Мастер-классы', id: 'hero'}, {title: 'Контакты', id: 'contacts'} ]
 
@@ -17,7 +17,7 @@ html(lang='ru')
       .container.grid.grid-header
         h1.header__title.hidden Фотостудия High Pass
         svg.svg.grid-logo(width='190', height='30', viewBox='0 0 190 30', aria-label='Логотип фотостудии High pass')
-          use(xlink:href='images/sprite.svg#logo')
+          use(xlink:href='./images/sprite.svg#logo')
         nav.header__nav.grid-nav
           ul.header__list
             each i in nav 
@@ -25,7 +25,7 @@ html(lang='ru')
                     a.header__link(href='#'+i.id)= i.title 
         button.header__search.grid-search(aria-label="Поиск")
           svg.svg(width='25', height='25', viewBox='0 0 25 25', xmlns='http://www.w3.org/2000/svg')
-            use(xlink:href='images/sprite.svg#search')
+            use(xlink:href='./images/sprite.svg#search')
         form(method="get").header__search-form.grid-search-form 
           input.header__input(type="text", name="search", placeholder='Что будем искать?')
           button.header__search-cls(aria-label="Закрыть поиск")
@@ -37,7 +37,7 @@ html(lang='ru')
                         a.header__link(href='#'+i.id)= i.title
         button.header__burger(aria-label="Меню")
             svg.svg(width='20', height='20', viewBox='0 0 20 20', xmlns='http://www.w3.org/2000/svg')
-                use(xlink:href='images/sprite.svg#burger')
+                use(xlink:href='./images/sprite.svg#burger')
  
         .header__menu 
           nav.header__nav.grid-nav.header__nav_mobile
@@ -49,17 +49,17 @@ html(lang='ru')
                 li.header__item 
                     a.header__phone.contacts__phone(href='tel:+74951234567', aria-label="Телефон") 
                         svg.contacts__call(width='22', height='22', viewBox='0 0 22 22', xmlns='http://www.w3.org/2000/svg')
-                            use(xlink:href='images/sprite.svg#call')
+                            use(xlink:href='./images/sprite.svg#call')
                         |+7&nbsp;495 424-23-532
     main.main
       #hero.hero
         .container.grid.grid-hero
           .hero__item.grid-hero-1
             picture
-              source(media='(max-width: 420px)', srcset='images/hero-320-1.webp')
-              source(media='(max-width: 920px)', srcset='images/hero-768-1.webp')
-              source(media='(max-width: 1200px)', srcset='images/hero-1024-1.webp')
-              img(src='images/hero-1920-1.webp', alt='Мастер-класс')
+              source(media='(max-width: 420px)', srcset='./images/hero-320-1.webp')
+              source(media='(max-width: 920px)', srcset='./images/hero-768-1.webp')
+              source(media='(max-width: 1200px)', srcset='./images/hero-1024-1.webp')
+              img(src='./images/hero-1920-1.webp', alt='Мастер-класс')
             .hero__block
               a.hero__link(href='#') #мастеркласс
               p.hero__author Мастер-класс от Игоря Робова
@@ -69,22 +69,22 @@ html(lang='ru')
           .hero__item.grid-hero-2
             h3.hero__subtitle Работы участников предыдущего мастер-класса
             picture
-              source(media='(max-width: 420px)', srcset='images/hero-320-2.webp')
-              source(media='(max-width: 920px)', srcset='images/hero-768-2.webp')
-              source(media='(max-width: 1200px)', srcset='images/hero-1024-2.webp')
-              img(src='images/hero-1920-2.webp', alt='Мастер-класс')
+              source(media='(max-width: 420px)', srcset='./images/hero-320-2.webp')
+              source(media='(max-width: 920px)', srcset='./images/hero-768-2.webp')
+              source(media='(max-width: 1200px)', srcset='./images/hero-1024-2.webp')
+              img(src='./images/hero-1920-2.webp', alt='Мастер-класс')
           .hero__item.grid-hero-3
             picture
-              source(media='(max-width: 420px)', srcset='images/hero-320-3.webp')
-              source(media='(max-width: 920px)', srcset='images/hero-768-3.webp')
-              source(media='(max-width: 1200px)', srcset='images/hero-1024-3.webp')
-              img(src='images/hero-1920-3.webp', alt='Мастер-класс')
+              source(media='(max-width: 420px)', srcset='./images/hero-320-3.webp')
+              source(media='(max-width: 920px)', srcset='./images/hero-768-3.webp')
+              source(media='(max-width: 1200px)', srcset='./images/hero-1024-3.webp')
+              img(src='./images/hero-1920-3.webp', alt='Мастер-класс')
           .hero__item.grid-hero-4
             picture
-              source(media='(max-width: 420px)', srcset='images/hero-320-4.webp')
-              source(media='(max-width: 920px)', srcset='images/hero-768-4.webp')
-              source(media='(max-width: 1200px)', srcset='images/hero-1024-4.webp')
-              img(src='images/hero-1920-4.webp', alt='Мастер-класс')
+              source(media='(max-width: 420px)', srcset='./images/hero-320-4.webp')
+              source(media='(max-width: 920px)', srcset='./images/hero-768-4.webp')
+              source(media='(max-width: 1200px)', srcset='./images/hero-1024-4.webp')
+              img(src='./images/hero-1920-4.webp', alt='Мастер-класс')
       #about.about
         .container.grid.grid-about
           h2.about__title.grid-title О студии
@@ -92,10 +92,10 @@ html(lang='ru')
             p.about__descr В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
           .about__pic.grid-about-2
             picture
-              source(media='(max-width: 420px)', srcset='images/about-320.webp')
-              source(media='(max-width: 920px)', srcset='images/about-768.webp')
-              source(media='(max-width: 1200px)', srcset='images/about-1024.webp')
-              img(src='images/about-1920.webp', alt='Фотостудия High pass')
+              source(media='(max-width: 420px)', srcset='./images/about-320.webp')
+              source(media='(max-width: 920px)', srcset='./images/about-768.webp')
+              source(media='(max-width: 1200px)', srcset='./images/about-1024.webp')
+              img(src='./images/about-1920.webp', alt='Фотостудия High pass')
             h3.about__subtitle Подписаться на рассылку
             form#form-email.about__form.form(action='https://jsonplaceholder.typicode.com/posts', method='post')
               .form__block
@@ -107,93 +107,93 @@ html(lang='ru')
           .grid.grid-projects
             .projects__item.grid-projects-1
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-1.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-1.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-1.webp')
-                img(src='images/project-1920-1.webp', alt='Пейзаж')
+                source(media='(max-width: 420px)', srcset='./images/project-320-1.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-1.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-1.webp')
+                img(src='./images/project-1920-1.webp', alt='Пейзаж')
               a.projects__link(href='#') #пейзаж
               p.projects__descr Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени черезвычайного эффекта
               .projects__time
                 svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns='http://www.w3.org/2000/svg')
-                  use(xlink:href='images/sprite.svg#date')
+                  use(xlink:href='./images/sprite.svg#date')
                 time(datetime='2022-06-16') 16 июня
             .projects__item.grid-projects-2
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-2.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-2.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-2.webp')
-                img(src='images/project-1920-2.webp', alt='Портрет')
+                source(media='(max-width: 420px)', srcset='./images/project-320-2.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-2.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-2.webp')
+                img(src='./images/project-1920-2.webp', alt='Портрет')
               a.projects__link(href='#') #портрет
               p.projects__descr В&nbsp;своём стремлении улучшить опыт мы упускаем, что явные противоречия исключают подобные проявления
               .projects__time
                 svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                  use(xlink:href='images/sprite.svg#date')
+                  use(xlink:href='./images/sprite.svg#date')
                 time(datetime='2022-05-28') 28 мая
             .projects__item.grid-projects-3
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-3.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-3.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-3.webp')
-                img(src='images/project-1920-3.webp', alt='Предмет')
+                source(media='(max-width: 420px)', srcset='./images/project-320-3.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-3.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-3.webp')
+                img(src='./images/project-1920-3.webp', alt='Предмет')
               a.projects__link(href='#') #предмет
               p.projects__descr Равным образом, высокое качество позиционных перспектив подразумевает наличие
               .projects__time
                 svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                  use(xlink:href='images/sprite.svg#date')
+                  use(xlink:href='./images/sprite.svg#date')
                 time(datetime='2022-05-14') 14 мая
             .projects__item.grid-projects-4
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-4.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-4.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-4.webp')
-                img(src='images/project-1920-4.webp', alt='fuji')
+                source(media='(max-width: 420px)', srcset='./images/project-320-4.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-4.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-4.webp')
+                img(src='./images/project-1920-4.webp', alt='fuji')
               a.projects__link(href='#') #fuji
               .projects__preview
                 .projects__time
                   svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                    use(xlink:href='images/sprite.svg#date')
+                    use(xlink:href='./images/sprite.svg#date')
                   time(datetime='2022-04-09') 9 апреля
                 h3.projects__subtitle Cемантический разбор
                 p.projects__descr В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы
                 button.projects__btn О проекте
             .projects__item.grid-projects-5
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-5.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-5.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-5.webp')
-                img(src='images/project-1920-5.webp', alt='Забвение')
+                source(media='(max-width: 420px)', srcset='./images/project-320-5.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-5.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-5.webp')
+                img(src='./images/project-1920-5.webp', alt='Забвение')
               a.projects__link(href='#') #пректзабвение
               .projects__preview
                 .projects__time
                   svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                    use(xlink:href='images/sprite.svg#date')
+                    use(xlink:href='./images/sprite.svg#date')
                   time(datetime='2022-03-20') 20 марта
                 h3.projects__subtitle Забвение
                 p.projects__descr Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
                 button.projects__btn О проекте
             .projects__item.grid-projects-6
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-6.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-6.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-6.webp')
-                img(src='images/project-1920-6.webp', alt='Ретушь')
+                source(media='(max-width: 420px)', srcset='./images/project-320-6.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-6.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-6.webp')
+                img(src='./images/project-1920-6.webp', alt='Ретушь')
               a.projects__link(href='#') #ретушь
               p.projects__descr Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом либералов и прочей структуры интересующихся
               .projects__time
                 svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                  use(xlink:href='images/sprite.svg#date')
+                  use(xlink:href='./images/sprite.svg#date')
                 time(datetime='2022-03-09') 9 марта
             .projects__item.grid-projects-7
               picture
-                source(media='(max-width: 420px)', srcset='images/project-320-7.webp')
-                source(media='(max-width: 920px)', srcset='images/project-768-7.webp')
-                source(media='(max-width: 1200px)', srcset='images/project-1024-7.webp')
-                img(src='images/project-1920-7.webp', alt='Портрет')
+                source(media='(max-width: 420px)', srcset='./images/project-320-7.webp')
+                source(media='(max-width: 920px)', srcset='./images/project-768-7.webp')
+                source(media='(max-width: 1200px)', srcset='./images/project-1024-7.webp')
+                img(src='./images/project-1920-7.webp', alt='Портрет')
               a.projects__link(href='#') #портрет
               p.projects__descr С&nbsp;учётом сложившейся международной обстановки, новая модель организационной позиции общества
               .projects__time
                 svg.svg(width='14', height='14', viewBox='0 0 14 14', xmlns="http://www.w3.org/2000/svg")
-                  use(xlink:href='images/sprite.svg#date')
+                  use(xlink:href='./images/sprite.svg#date')
                 time(datetime='2022-03-01') 1 марта
       #contacts.contacts
         .container
@@ -204,7 +204,7 @@ html(lang='ru')
               address.contacts__address 107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
               a.contacts__phone(href='tel:+74951234567', aria-label='Телефон') 
                 svg.contacts__call(width='22', height='22', viewBox='0 0 22 22', xmlns="http://www.w3.org/2000/svg")
-                  use(xlink:href='images/sprite.svg#call')
+                  use(xlink:href='./images/sprite.svg#call')
                 |+7&nbsp;495 424-23-532
               button.contacts__btn-cls(aria-label='Закрыть')
             #map.contacts__map.grid-map
@@ -222,7 +222,7 @@ html(lang='ru')
       .container.grid.grid-footer
         .footer__block.grid-footer-1
           svg.svg(width='190', height='30', viewBox='0 0 190 30')
-            use(xlink:href='images/sprite.svg#logo')
+            use(xlink:href='./images/sprite.svg#logo')
           span Фотостудия High pass &reg;2018&ndash;2020
         .footer__block.grid-footer-2
           p.footer__descr Которая из&nbsp;моих фотографий самая любимая?
@@ -235,7 +235,7 @@ html(lang='ru')
           .footer__social
             a.footer__link(href='#', aria-label="Социальная сеть Одноклассники")
                 svg.contacts__call(width='30', height='30', viewBox='0 0 30 30', xmlns="http://www.w3.org/2000/svg")
-                    use(xlink:href='images/sprite.svg#ok')
+                    use(xlink:href='./images/sprite.svg#ok')
             a.footer__link(href='#', aria-label="Социальная сеть Вконтакте")
                 svg.contacts__call(width='30', height='30', viewBox='0 0 30 30', xmlns="http://www.w3.org/2000/svg")
-                    use(xlink:href='images/sprite.svg#vk')
+                    use(xlink:href='./images/sprite.svg#vk')
